@@ -1,7 +1,8 @@
 "use strict";
-const icon = document.querySelector(".articles__icon ");
-console.log(icon);
+const articlesItem = document.querySelector(".articles");
 
-icon.addEventListener("click", function (e) {
-  e.currentTarget.classList.toggle("active");
+articlesItem.addEventListener("click", function (e) {
+  const iconSvg = e.target.closest(".articles__icon");
+  if (!iconSvg) return;
+  iconSvg.classList.toggle("active");
 });
